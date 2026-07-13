@@ -1,0 +1,50 @@
+{
+  "config": {
+    "id_field": "record_id",
+    "source_field": "source",
+    "timestamp_field": "updated_at",
+    "source_trust": ["CRM", "ERP", "WEB"],
+    "default_strategy": "most_trusted_source",
+    "attributes": {
+      "full_name": { "strategy": "most_trusted_source" },
+      "email": { "strategy": "most_recent" },
+      "phone": { "strategy": "most_complete" },
+      "loyalty_tier": { "strategy": "most_frequent" },
+      "lifetime_value": { "strategy": "max" }
+    }
+  },
+  "clusters": [
+    [
+      {
+        "record_id": "CRM-001",
+        "source": "CRM",
+        "updated_at": "2026-05-01T09:00:00Z",
+        "full_name": "Priya Sharma",
+        "email": "priya@old-domain.com",
+        "phone": "+91 98765 43210",
+        "loyalty_tier": "Gold",
+        "lifetime_value": 1200
+      },
+      {
+        "record_id": "ERP-114",
+        "source": "ERP",
+        "updated_at": "2026-06-15T12:30:00Z",
+        "full_name": "PRIYA SHARMA",
+        "email": "priya.sharma@new-domain.com",
+        "phone": "9876543210",
+        "loyalty_tier": "Gold",
+        "lifetime_value": 1500
+      },
+      {
+        "record_id": "WEB-889",
+        "source": "WEB",
+        "updated_at": "2026-06-20T18:45:00Z",
+        "full_name": "",
+        "email": "priya.sharma@new-domain.com",
+        "phone": "",
+        "loyalty_tier": "Silver",
+        "lifetime_value": 900
+      }
+    ]
+  ]
+}

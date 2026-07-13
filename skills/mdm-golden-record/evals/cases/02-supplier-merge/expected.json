@@ -1,0 +1,40 @@
+{
+  "clusters": [
+    {
+      "golden_record": {
+        "supplier_name": "Acme Components Ltd",
+        "country": "IN",
+        "risk_rating": 2,
+        "onboarding_date": "2024-02-20",
+        "tax_id": "IN29ABCDE1234F1Z5",
+        "website": null
+      },
+      "sources": {
+        "supplier_name": "MASTER",
+        "country": "MASTER",
+        "risk_rating": "computed",
+        "onboarding_date": "PORTAL",
+        "tax_id": "MASTER",
+        "website": null
+      }
+    },
+    {
+      "golden_record": {
+        "supplier_name": "Globex",
+        "country": "US",
+        "risk_rating": 1,
+        "onboarding_date": "2025-01-01",
+        "tax_id": "US-999",
+        "website": "globex.example"
+      },
+      "sources": {
+        "supplier_name": "MASTER",
+        "country": "MASTER",
+        "risk_rating": "computed",
+        "onboarding_date": "MASTER",
+        "tax_id": "MASTER",
+        "website": "MASTER"
+      }
+    }
+  ]
+}

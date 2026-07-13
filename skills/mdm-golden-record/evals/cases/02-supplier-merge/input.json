@@ -1,0 +1,65 @@
+{
+  "config": {
+    "id_field": "record_id",
+    "source_field": "source",
+    "timestamp_field": "updated_at",
+    "source_trust": ["MASTER", "REGIONAL", "PORTAL"],
+    "default_strategy": "most_trusted_source",
+    "attributes": {
+      "supplier_name": { "strategy": "most_trusted_source" },
+      "country": { "strategy": "most_frequent" },
+      "risk_rating": { "strategy": "min" },
+      "onboarding_date": { "strategy": "most_recent" }
+    }
+  },
+  "clusters": [
+    [
+      {
+        "record_id": "MASTER-A",
+        "source": "MASTER",
+        "updated_at": "2026-01-10T00:00:00Z",
+        "supplier_name": "Acme Components Ltd",
+        "country": "IN",
+        "risk_rating": 3,
+        "onboarding_date": "2024-03-01",
+        "tax_id": "IN29ABCDE1234F1Z5",
+        "website": ""
+      },
+      {
+        "record_id": "REGIONAL-A",
+        "source": "REGIONAL",
+        "updated_at": null,
+        "supplier_name": "Acme Components",
+        "country": "SG",
+        "risk_rating": 2,
+        "onboarding_date": "2024-03-05",
+        "tax_id": "",
+        "website": ""
+      },
+      {
+        "record_id": "PORTAL-A",
+        "source": "PORTAL",
+        "updated_at": "2026-02-01T00:00:00Z",
+        "supplier_name": "",
+        "country": "",
+        "risk_rating": 5,
+        "onboarding_date": "2024-02-20",
+        "tax_id": "",
+        "website": ""
+      }
+    ],
+    [
+      {
+        "record_id": "MASTER-B",
+        "source": "MASTER",
+        "updated_at": "2026-03-01T00:00:00Z",
+        "supplier_name": "Globex",
+        "country": "US",
+        "risk_rating": 1,
+        "onboarding_date": "2025-01-01",
+        "tax_id": "US-999",
+        "website": "globex.example"
+      }
+    ]
+  ]
+}
